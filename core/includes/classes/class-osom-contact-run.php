@@ -137,7 +137,7 @@ class Osom_Contact_Run{
 				'methods'  => \WP_REST_Server::READABLE,
 				'callback' => array( $this, 'prepare_rest_api_demo_response' ),
 				'permission_callback' => function( $request ) {
-					return true; //Change to limit access
+					return true; 
 				},
 				'args' => array(
 					'id' => array(
@@ -171,6 +171,8 @@ class Osom_Contact_Run{
 	 *
 	 * @return	object|WP_REST_Response
 	 */
+
+	// Only short demo without callback origin OSOM content
 	public function prepare_rest_api_demo_response( $request ){
 		$response = array(
 			'success' => false,
